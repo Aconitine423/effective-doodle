@@ -1,0 +1,36 @@
+.box {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transition: 0.5s;
+  /* 전환 */
+}
+/* :hover : 가상클래스 선택자 */
+.box:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+/* 활성화 된 상태 */
+.box:active {
+  width: 300px;
+  background-color: red;
+}
+/* 선택된 상태 */
+.box:focus {
+  width: 300px;
+  background-color: pink;
+}
+a:hover {
+  color: blue;
+}
+a:active {
+  color: orange;
+}
+input:focus {
+  background-color: orange;
+}
+/* 해당 선택자가 체크된 상태에서 다음 형제 요소 하나 선택 */
+#fruit:checked + label {
+  color: blue;
+}

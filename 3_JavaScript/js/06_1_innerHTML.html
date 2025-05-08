@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="example2">
+      <p>Hello<strong>World</strong>!</p>
+    </div>
+    <script>
+      const divEl = document.getElementById("example2");
+      console.dir(divEl.innerHTML);
+      console.dir(divEl.innerText);
+      divEl.innerHTML = "<h1>New Content</h1>";
+      console.dir(divEl.innerHTML);
+    </script>
+    <!-- 속성 | 설명                                                           |속도  | 보안 위험
+     textContent | 텍스트만을 가져오거나 설정(스타일 무시:display:none도 읽어옴) ㅣ 빠름 | XSS에 안전
+     innerText | 텍스트만을 가져오거나 설정(스타일 반영:display:none은 읽지 않음) | 느림 | XSS에 안전
+     innerHTML | HTML 해석 후 컨텐츠 전체를 가져오거나 설정                      | 중간 | XSS에 취약가능 -->
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/btn.png" type="image/x-icon" />
+    <title>Document</title>
+    <style>
+      /* .fruits 의 후손들 중에서 span 이 첫자식이면 선택*/
+      /* .fruits span:first-child {
+        color: blue;
+      } */
+      /* .fruits 의 후손들 중에서 div 가 첫자식이면 선택(없음) */
+      /* .fruits div:first-child {
+        color: red;
+      } */
+      /* .fruits 의 후손들 중에서 h3 가 마지막자식이면 선택 */
+      /* .fruits h3:last-child {
+        color: red;
+      } */
+      /* .fruits 의 후손들 중에서 2번째 자식이면 선택 */
+      /* .fruits *:nth-child(2) {
+        color: pink;
+      } */
+      /* 짝수번째 선택, n2는 안됨 */
+      /* n은 0,1,2... 알아서 증가 */
+      /* .fruits *:nth-child(2n) {
+        color: pink;
+      } */
+      /* 홀수번째 선택, 1+2n은 안됨 */
+      /* .fruits *:nth-child(2n + 1) {
+        color: red;
+      } */
+      /* n은 0,1,2... 2번부터 선택 */
+      /* .fruits *:nth-child(n + 2) {
+        color: orange;
+      } */
+      /* .fruits 의 후손들 중에서 span 이 아닌 자식 선택(부정 선택자) */
+      .fruits *:not(span) {
+        color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fruits">
+      <span>딸기</span>
+      <span>수박</span>
+      <div>오렌지</div>
+      <p>망고</p>
+      <h3>사과</h3>
+    </div>
+  </body>
+</html>

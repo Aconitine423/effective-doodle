@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="example2">
+      <p>Hello <span style="display: none">Hidden</span> World!</p>
+    </div>
+    <script>
+      const div = document.getElementById("example2");
+      // console.log(div.innerText); // 출력: "Hello World!"
+      div.innerHTML = "<b>11111</b>";
+      console.log(div.textContent);
+    </script>
+  </body>
+</html>

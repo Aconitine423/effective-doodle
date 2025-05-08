@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 산술 연산자
+      console.log(10 / 3);
+      // 소속이 없는 메소드 = 함수
+      console.log(parseInt(10 / 3)); // parseInt: 결과값을 정수로
+      console.log(10 % 3);
+      // 대입(할당) 연산자
+      let a = 2; // 일반 변수
+      a += 2;
+      console.log("a=", a); // a = 4
+      //증감 연산자
+      console.log("a++", a++);
+      console.log("a", a);
+      // 비교 연산자
+      const b = 1; // 상수 변수
+      const c = 3;
+      console.log(b < c);
+      console.log(b > c);
+      console.log(b >= c);
+      console.log(b <= c);
+      console.log(b == c, b === c);
+
+      function isEqual(x, y) {
+        return x === y; // 일치연산자(데이터타입까지 비교), java: ==
+        // return x == y; // 비교연산자(형변환), java ==
+      }
+      console.log(isEqual(1, 1));
+      console.log(isEqual(2, "2"));
+      console.log(2 != "2"); // 비교연산자(형변환)
+      console.log(2 !== "2"); // 일치연산자
+
+      const d = 1 === 1;
+      const e = "ab" === "ab";
+      const f = true;
+      console.log("d:", d);
+      console.log("e:", e);
+      // 논리 연산 (!부정 > && 논리곱 > || 논리합)
+      console.log("&&: ", d && e && f);
+      console.log("||: ", d || e || f);
+      console.log("!: ", !d);
+
+      // short cut (단축회로)
+      let num = 10;
+      //   console.log(true || num++); // 앞이 참이면 뒤 수식은 무시
+      //   console.log(false || num++);
+      console.log(false && num++); // 앞이 거짓이기에 뒤 수식도 무시
+      console.log("num: ", num);
+    </script>
+  </head>
+  <body></body>
+</html>

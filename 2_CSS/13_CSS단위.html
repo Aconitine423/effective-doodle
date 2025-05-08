@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/btn.png" type="image/x-icon" />
+    <title>Document</title>
+    <style>
+      /* px, %, em(요소글꼴의 크기), rem(root(html)요소 글꼴의 크기), vw,vh)
+	뷰포트 너비의 1%를 의미합니다.
+	1vw는 현재 브라우저 창의 전체 너비의 1%입니다.
+	예를 들어, 화면 너비가 1000px인 경우:
+	1vw = 10px
+	50vw = 500px (전체 화면의 절반)
+	
+    0px==0%==0em==0rem==0  수치값이 0이라면 단위를 붙이지 않는다. */
+      /* html {
+        font-size: 32px;
+      } */
+      .parent {
+        /* width: 300px; */
+        width: 50vw;
+        /* height: 200px; */
+        height: 300vh;
+        background-color: blue;
+      }
+      .child {
+        /* width: 200px; */
+        /*width: 50%;*/ /*부모의 50% 너비*/
+        font-size: 32px;
+        /*width: 20em;*/ /*글꼴크기 32px*20*/
+        width: 20rem; /*html글꼴크기 16px*20*/
+        height: 100px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      111111
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

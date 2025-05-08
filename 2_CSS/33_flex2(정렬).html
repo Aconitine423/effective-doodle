@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Flex Container (부모 요소) */
+      .container {
+        background-color: royalblue;
+        display: flex;
+        /* flex-direction: row; */
+        /* justify-content: (수평(row)일시) flex-start(기본값, 왼쪽정렬), flex-end(오른쪽정렬), center(가운데정렬) */
+        justify-content: center;
+        /* flex-wrap: nowrap(기본값), wrap(자식요소를 줄바꿈(너비)) */
+        /* flex-wrap: wrap; */
+        /* 수직 정렬 */
+        /* align-content: stretch(기본값), flex-wrap:wrap설정필요, 자식요소 여러줄을 묶어서 수직정렬*/
+        /* align-items: 권장, flex-wrap설정 불필요, 자식요소를 한줄마다 수직정렬 */
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        height: 400px;
+      }
+      /* Flex Items (자식 요소) */
+      .container .item {
+        width: 100px;
+        /* align-items: stretch(부모 높이만큼 최대한늘린다), height를 생략해야함 */
+        /* height: 100px; */
+        border: 3px dashed red;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </body>
+</html>

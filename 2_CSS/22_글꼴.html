@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+    </style>
+    <style>
+      h1 {
+        font-size: 24px;
+        /* 기본값: normal(400), bold(700), 100~900 */
+        font-weight: 700;
+        /* font-style: italic; */
+        /* sans-serif(고딕체계열), serif(바탕체계열) */
+        /* 글꼴이 없는 경우를 대비해 여러개를 배치 */
+        /* font-family: "Times New Roman", Times, serif; */
+        font-family: "Noto Sans KR";
+      }
+      p {
+        /* display: block; */
+        width: 350px;
+        height: 200px;
+        padding: 10px;
+        border: 1px solid;
+        box-sizing: border-box;
+        /*line-height: 2; 자동으로 두배(권장) 기본값은 1.5배*/
+        line-height: 200%;
+        /* 컨텐츠 크기와 같은 값 주면 세로 가운데 정렬(편법) */
+        /* line-height: 178px; */
+        /* auto: 여백 계산해서 자동으로 가운데 정렬 width값 필수 */
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <p>Shown in the Times New Roman font. Shown in the Times New Roman font.</p>
+  </body>
+</html>

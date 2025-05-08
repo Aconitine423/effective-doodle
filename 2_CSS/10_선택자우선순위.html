@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/btn.png" type="image/x-icon" />
+    <title>Document</title>
+    <style>
+      /* !important: 무한메달 */
+      /* div {
+        color: red !important;
+      } */
+      /* 우선순위: 아이디 > 클래스 > 태그 > 전체 > 상속 */
+      /* 러프하게 선택하는것은 구체적으로 선택하는것보다 우선순위가 낮다 */
+      /* 동률이면 아래코드가 우선 */
+      /* 금메달 */
+      #color_yellow {
+        color: yellow;
+      }
+      /* 은메달 */
+      .color_green {
+        color: green;
+      }
+      /* 동메달 */
+      div {
+        color: blue;
+      }
+      /* 참가 메달 */
+      * {
+        color: darkblue;
+      }
+      /* 상속은 메달 없음 */
+      body {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 인라인 CSS가 우선순위 가장 높다 (!important보다는 낮음) -->
+    <div id="color_yellow" class="color_green" style="color: orange">Hello world!</div>
+  </body>
+</html>

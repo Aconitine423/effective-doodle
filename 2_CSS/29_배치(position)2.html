@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 300px;
+        background-color: royalblue;
+        position: relative;
+      }
+      .container .item {
+        width: 100px;
+        height: 100px;
+        border: 4px dashed red;
+      }
+      .container .item:nth-child(1) {
+        position: relative;
+        background-color: orange;
+        z-index: 1;
+      }
+      .container .item:nth-child(2) {
+        background-color: red;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 2;
+      }
+      .container .item:nth-child(3) {
+        background-color: aqua;
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        /* position이 static 일시 z-index가 높아도 우선순위에 밀린다. */
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 요소 쌓임 순서: Stack order
+     1. 요소에 position속성의 값이 있는 경우 위에 쌓임(static 제외)
+        1-1. 같은 static일 경우 z-index값이 높을 수록 위에 쌓임
+     2. 1번 조건이 같은 경우, z-index속성의 숫자 값이 높을 수록 위에 쌓임
+     3. 1번2번 조건까지 같은 경우, html의 다음 구조일수록 위에 쌓임 -->
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

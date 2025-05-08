@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/btn.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="login">
+      아이디: <input id="userId" type="text" name="id" value="admin" /><br />
+      <!-- id는 프론트엔드에서 식별하는 고유의 값 -->
+      <!-- name은 서버로 전송하는 파라미터를 식별하는 값 -->
+      비밀번호: <input id="userPw" type="password" name="pw" minlength="4" /> <br />
+      <!-- <button>로그인</button>
+      <input type="submit" value="로그인2" /> -->
+      <input type="button" value="일반버튼" onclick="showIdPw()" />
+    </form>
+    <fieldset>
+      <legend>checkbox & radio</legend>
+      <form action="join">
+        <input type="checkbox" name="hobby" value="movie" checked />영화
+        <input type="checkbox" name="hobby" value="music" />음악
+        <input type="checkbox" name="hobby" value="book" />독서
+        <!-- 같은 카테고리라면 name을 동일하게 한다. -->
+        <br />
+        <input type="radio" name="gender" value="male" />남성
+        <input type="radio" name="gender" value="female" />여성
+        <br />
+        <button>전송</button>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>hidden & text</legend>
+      <form action="url">
+        name: <input type="text" name="name" /><br />
+        <input type="hidden" name="pno" value="990909-1234567" />
+        <input type="submit" value="전송" />
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>file</legend>
+      <form action="url">
+        파일선택: <input type="file" name="attach" />
+        <br />
+        <button>파일전송</button>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>select</legend>
+      <form action="url">
+        <select name="car">
+          <option value="">선택</option>
+          <option value="benz">벤츠</option>
+          <option value="audi">아우디</option>
+          <option value="bmw">BMW</option>
+          <option value="volvo">볼보</option>
+        </select>
+        <button>구매</button>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>color</legend>
+      컬러 선택: <input type="color" />
+    </fieldset>
+    <fieldset>
+      <legend>date & month</legend>
+      date: <input type="date" /> <br />
+      month: <input type="month" /><br />
+      time: <input type="datetime-local" />
+    </fieldset>
+    <fieldset>
+      <legend>e-mail & url</legend>
+      <form action="url">
+        e-mail: <input type="email" name="email" /> <br />
+        url: <input type="url" name="url" /><br />
+        <button>전송</button>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>number & range</legend>
+      <form action="url">
+        NUMBER(1~10):
+        <input type="number" id="number" name="qty" min="1" max="10" value="1" step="" /><br />
+        RANGE(0~10):
+        <input type="range" id="range" name="point" min="0" max="10" value="0" step="2" /><br />
+        <button type="button" onclick="showValue()">버튼</button>
+      </form>
+    </fieldset>
+    <script>
+      // js 코드 작성
+      function showValue() {
+        let val1 = document.getElementById("number").value;
+        let val2 = document.getElementById("range").value;
+        // alert("number: " + val1 + "\nrange: " + val2);
+        console.log("number: " + val1 + "\nrange: " + val2);
+      }
+      function showIdPw() {
+        let id = document.getElementById("userId").value;
+        let pw = document.getElementById("userPw").value;
+        console.log("아이디: ", id, "\n비밀번호: ", pw);
+      }
+    </script>
+  </body>
+</html>
