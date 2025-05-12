@@ -1,5 +1,0 @@
-Ctrl + / : 주석
-Alt + Shift + f : 들여쓰기 정렬
-Alt + Shift + 방향키 : 라인복사
-Alt + 방향키 : 코드라인 이동
-Ctrl + Shift + k : 줄 삭제
